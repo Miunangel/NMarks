@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "N Bookmark Sync",
+  "short_name": "NMarks",
+  "version": "0.1",
+  "description": "Sync your bookmarks by NMarks",
+  "homepage_url": "https://blog.fallen-angle.com/BookmarkTomb_Docs/",
+  "icons": {
+    "48": "assets/logo.png",
+    "64": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
+
+  "permissions": ["https://*/", "http://*/", "bookmarks", "unlimitedStorage"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+
+  "options_ui": {
+    "page": "html/options.html",
+    "chrome_style": false,
+    "open_in_tab": true
+  },
+
+  "browser_action": {
+    "browser_style": false,
+    "chrome_style": false,
+    "default_icon": {
+      "48": "assets/logo.png"
+    },
+    "default_title": "Open BookmarkTomb Options",
+    "default_popup": "html/options.html"
+  },
+
+  "background": {
+    "page": "html/background.html"
+  }
+}
